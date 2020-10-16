@@ -10,11 +10,12 @@ public class CityNames {
 		/*
 		 * Ejercicio: El ejercicio consiste en mostrar por consola diferentes nombres de
 		 * ciudades partiendo de un array y modificar los nombres cambiando letras. 
-		 * FASE
-		 * 3 - cambiar las vocales "a" de los nombres de las ciudades por el numero 4 y
-		 * guarde los nombres modificados en un nuevo array (ArrayCiutatsModificades). -
-		 * Muestre por consola el array modificado y ordenado por orden alfabético.
-		 * 
+		 *FASE 4
+		- Crea un nuevo array para cada una de las ciudades que tenemos. El tamaño de los nuevos arrays será la 
+		longitud de cada string (string nomCiutat.Length).
+		- Llene los nuevos arrays letra por letra.
+		- Muestre por consola los nuevos arrays con los nombres invertidos (Ej: Barcelona - anolecraB).
+
 		 * 
 		 */
 
@@ -31,21 +32,60 @@ public class CityNames {
 		varSeis = scan.nextLine();
 		// System.out.println(varUno+", "+ varDos+", "+ varTres+", " +varCuatro+", "+
 		// varCinco+", "+ varSeis);
-
 		scan.close();
 
-		List<String> arrayCities = Arrays.asList(varUno, varDos, varTres, varCuatro, varCinco, varSeis);
-
-		List<String> arrayCitiesModif = new ArrayList<String>();
-		for (int i = 0; i < arrayCities.size(); i++) {
-			arrayCitiesModif.add(arrayCities.get(i).replaceAll("a", "4"));
+		String arrBarcelona[]=new String[varUno.length()];
+		for (int i=0; i<arrBarcelona.length; i++) {
+			arrBarcelona[i]=varUno.substring(i, i+1);
 		}
-
-		Collections.sort(arrayCitiesModif);
-		for (String i : arrayCitiesModif) {
-			System.out.println(i);
+		for (int i=(arrBarcelona.length-1);i>=0; i--) {
+			System.out.print(arrBarcelona[i]);
 		}
+		System.out.println("");
+		
+		String arrMadrid[]=new String[varDos.length()];
+		for (int i=0; i<arrMadrid.length; i++) {
+			arrMadrid[i]=varDos.substring(i, i+1);
+		}
+		for (int i=(arrMadrid.length-1);i>=0; i--) {
+			System.out.print(arrMadrid[i]);
+		}
+		System.out.println("");
 
+		String arrValencia[]=new String[varTres.length()];
+		for (int i=0; i<arrValencia.length; i++) {
+			arrValencia[i]=varTres.substring(i, i+1);
+		}
+		for (int i=(arrValencia.length-1);i>=0; i--) {
+			System.out.print(arrValencia[i]);
+		}
+		System.out.println("");
+
+		String arrMalaga[]=new String[varCuatro.length()];
+		for (int i=0; i<arrMalaga.length; i++) {
+			arrMalaga[i]=varCuatro.substring(i, i+1);
+		}
+		for (int i=(arrMalaga.length-1);i>=0; i--) {
+			System.out.print(arrMalaga[i]);
+		}
+		System.out.println("");
+
+		String arrCadiz[]=new String[varCinco.length()];
+		for (int i=0; i<arrCadiz.length; i++) {
+			arrCadiz[i]=varCinco.substring(i, i+1);
+		}
+		for (int i=(arrCadiz.length-1);i>=0; i--) {
+			System.out.print(arrCadiz[i]);
+		}
+		System.out.println("");
+
+		String arrSantander[]=new String[varSeis.length()];
+		for (int i=0; i<arrSantander.length; i++) {
+			arrSantander[i]=varSeis.substring(i, i+1);
+		}
+		for (int i=(arrSantander.length-1);i>=0; i--) {
+			System.out.print(arrSantander[i]);
+		}
 	}
 
 }
